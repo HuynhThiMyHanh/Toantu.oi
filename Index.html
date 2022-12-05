@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bang Diem Cua Emm
+        </h1>
+        <div id="input">
+            <span>Semester1:</span>
+            <input type="text" name="inputta" id="text_1" size="40px">
+        </div>
+        <div id="input">
+            <span>Semester2:</span>
+            <input type="text" name="inputta" id="text_2" size="40px">
+        </div>
+       <div id="input">
+        <div id="form-horizontal">
+            <div class="row">
+                <div class="col-sm-2">
+                    <span>Year:</span>
+                </div>
+                <div class="col-sm-2">
+                    <select style="width:50px;color: red" id="select">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                    </select>
+                </div>
+                <div class="col-sm-8">                   
+                </div>
+            </div>
+        </div>
+        <div id="input">
+            <div id="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <span>Summarise:</span>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="text" name="result" id="result"size="40" disabled="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="input">
+            <div id="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p id="display">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form-horizontal">
+            <div class="row">
+                <div class="col-sm-4">                   
+                </div>
+                <div class="col-sm-2">      
+                    <input type="button" name="ok" id="ok"value="OK" onclick="myFunction1()">             
+                </div>
+                <div class="col-sm-2"> 
+                    <input type="button" name="cancel" id="cancel"value="Cancel" onclick="myFunction2()">                      
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script>
+        function myFunction1(){
+            var a=document.getElementById('text_1').value;
+            a=parseInt(a);
+            var b=document.getElementById('text_2').value;
+            b=parseInt(a);
+            var c=document.getElementById('select');
+            value=parseInt(value);
+            var k;
+            switch(value){
+                case 1:{
+                    k=(a+(b*2))/3;
+                    k=parseFloat(k);
+                    document.getElementById('result').value=k;                    
+                }
+                case 2:{
+                    k=((a*2)+(b*3))/5;
+                    k=parseFloat(k);
+                    document.getElementById('result').value=k;                   
+                }
+                case 3:{
+                    k=(a*3+(b*4))/7;
+                    k=parseFloat(k);
+                    document.getElementById('result').value=k;                   
+                }
+            if(k>=9){
+                document.getElementById('display').innerHTML="Hoc sinh Gioi";
+                document.getElementById('display').style.color="red";
+            }
+            if(k>=7 && k<9){
+                document.getElementById('display').innerHTML="Hoc sinh Kha";
+                document.getElementById('display').style.color="blue";
+            }
+            if(k>=5 && k<7){
+                document.getElementById('display').innerHTML="Hoc sinh TRung Binh";
+                document.getElementById('display').style.color="Yellow";
+            }
+
+            }
+
+        }
+        function myFunction2(){
+            document.getElementById('text_1').value="";
+            document.getElementById('text_2').value="";
+        }     
+   </script>
+</body>
+</html>
